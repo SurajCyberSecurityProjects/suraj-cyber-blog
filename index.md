@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: home
 title: "Suraj's Cybersecurity Projects Blog"
 excerpt: "Hands-on defensive security projects using Splunk, MITRE ATT&CK, and more."
 author_profile: true
@@ -9,6 +9,9 @@ header:
   overlay_image: /assets/images/blog-header.jpg
   caption: "Real-world Detection & Response Projects"
 ---
+
+Welcome to my cybersecurity blog. Explore hands-on detection and response labs using MITRE ATT&CK, Splunk, Windows Defender, and more.
+
 
 # 🛡️ Endpoint Threat Detection & Response with Splunk + Windows Defender
 
