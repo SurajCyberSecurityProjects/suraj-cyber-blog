@@ -1,6 +1,7 @@
 title: "Suraj's Cybersecurity Projects Blog"
-description: "Real-world threat detection using Splunk + MITRE"
-remote_theme: mmistakes/minimal-mistakes
+description: "Real-world EDR detections using Splunk + MITRE"
+remote_theme: "mmistakes/minimal-mistakes@4.27.2"
 minimal_mistakes_skin: "air"
 plugins:
   - jekyll-feed
+  - jekyll-include-cache
