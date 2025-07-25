@@ -1,12 +1,9 @@
 title: "Suraj's Cybersecurity Projects Blog"
 email: surajchoudhary3009@gmail.com
-description: >- 
+description: >-
   A hands-on defensive security blog using Splunk, MITRE ATT&CK, and real-world EDR detections.
-baseurl: "" 
+baseurl: "/suraj-cyber-blog"  # <- IMPORTANT: Your repo name
 url: "https://surajcybersecurityprojects.github.io"
-
-twitter_username: suraj_cyber
-github_username: SurajCyberSecurityProjects
 
 remote_theme: "mmistakes/minimal-mistakes@4.27.2"
 minimal_mistakes_skin: "dark"
@@ -18,6 +15,7 @@ plugins:
 
 permalink: /:categories/:title/
 
+# Author (shows in sidebar)
 author:
   name: "Suraj"
   avatar: "/assets/images/profile-pic.png"
@@ -31,6 +29,21 @@ author:
       icon: "fab fa-github"
       url: "https://github.com/SurajCyberSecurityProjects"
 
+# Navigation (optional)
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Projects"
+    url: /projects/
+  - title: "About"
+    url: /about/
+
+include:
+  - _pages
+
+markdown: kramdown
+highlighter: rouge
+
 defaults:
   - scope:
       path: ""
@@ -43,6 +56,7 @@ defaults:
       share: true
       related: true
 
+# Optional: Google Analytics
 analytics:
   provider: "google-gtag"
   google:
