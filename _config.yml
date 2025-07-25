@@ -1,6 +1,6 @@
-title: Suraj's Cybersecurity Projects Blog
-description: Real-world defensive security projects using Splunk + MITRE ATT&CK
-theme: minima
-markdown: kramdown
+title: "Suraj's Cybersecurity Projects Blog"
+description: "Real-world threat detection using Splunk + MITRE"
+remote_theme: mmistakes/minimal-mistakes
+minimal_mistakes_skin: "air"
 plugins:
   - jekyll-feed
