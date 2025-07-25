@@ -8,11 +8,9 @@ url: "https://surajcybersecurityprojects.github.io"
 twitter_username: suraj_cyber
 github_username: SurajCyberSecurityProjects
 
-# ✅ Use only remote_theme — do NOT include 'theme:' if using GitHub Pages
 remote_theme: "mmistakes/minimal-mistakes@4.27.2"
-minimal_mistakes_skin: "dark" # or air, mint, plum, etc.
+minimal_mistakes_skin: "dark"
 
-# Plugins (important for GitHub Pages + theme features)
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -20,7 +18,6 @@ plugins:
 
 permalink: /:categories/:title/
 
-# Author profile (shown in sidebar if author_profile: true)
 author:
   name: "Suraj"
   avatar: "/assets/images/profile-pic.png"
@@ -34,7 +31,6 @@ author:
       icon: "fab fa-github"
       url: "https://github.com/SurajCyberSecurityProjects"
 
-# Defaults for your posts/pages
 defaults:
   - scope:
       path: ""
@@ -47,10 +43,10 @@ defaults:
       share: true
       related: true
 
-# Analytics (optional, disable if not using)
 analytics:
   provider: "google-gtag"
   google:
-    tracking_id: "" # Add your tracking ID if needed
+    tracking_id: ""
     anonymize_ip: false
+
 
