@@ -1,5 +1,6 @@
 ---
-title: Suraj's Cybersecurity Projects Blog
+layout: single
+author_profile: false
 ---
 
 # 🛡️ Endpoint Threat Detection & Response with Splunk + Windows Defender
