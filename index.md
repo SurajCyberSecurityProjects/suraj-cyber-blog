@@ -1,5 +1,4 @@
 ---
----
 layout: single
 title: "Suraj's Cybersecurity Projects Blog"
 excerpt: "Hands-on defensive security projects using Splunk, MITRE ATT&CK, and more."
@@ -10,8 +9,6 @@ header:
   overlay_image: /assets/images/blog-header.jpg
   caption: "Real-world Detection & Response Projects"
 ---
----
-
 
 # 🛡️ Endpoint Threat Detection & Response with Splunk + Windows Defender
 
@@ -25,110 +22,83 @@ This project demonstrates how to detect, visualize, and alert on endpoint-level 
 
 🔍 Core Outcomes:
 
-- Created MITRE-mapped detections
-- Simulated real-world threats (PowerShell, Brute-force, Registry changes)
-- Built a live Splunk dashboard
+- Created MITRE-mapped detections  
+- Simulated real-world threats (PowerShell, Brute-force, Registry changes)  
+- Built a live Splunk dashboard  
 - Created custom alerts and documented detection-to-response flow
 
 ---
 
-## 🧩 MITRE ATT&CK Mapping
+## 🌿 MITRE ATT&CK Mapping
 
-| Technique | Name                             | Description                                 |
-|----------|----------------------------------|---------------------------------------------|
-| T1059.001 | **PowerShell Execution**         | Detects suspicious PowerShell usage         |
-| T1110.001 | **Brute-force Login Attempts**   | Identifies multiple failed login attempts   |
-| T1112     | **Registry Modification**        | Flags unauthorized registry changes         |
+| Technique    | Name                          | Description                             |
+|-------------|-------------------------------|-----------------------------------------|
+| T1059.001   | PowerShell Execution           | Detects suspicious PowerShell usage     |
+| T1110.001   | Brute-force Login Attempts     | Identifies multiple failed logins       |
+| T1112       | Registry Modification          | Flags unauthorized registry changes     |
 
 ---
 
 ## ⚡ PowerShell Abuse Detection (T1059.001)
 
-This detection focuses on identifying misuse of PowerShell — a favorite for attackers.
-
 ### 🔍 Raw Log Sample
 
-![PowerShell Logs](images/Powershell%20log%20results.png)
+![PowerShell Logs](/assets/images/Powershell%20log%20results.png)
 
-We intentionally ran invalid PowerShell commands and system reconnaissance (e.g., `whoami`, `Get-Process`) to generate logs.
+We ran recon commands (e.g., `whoami`, `Get-Process`) to simulate attacker behavior. These generated logs were ingested into Splunk.
 
-### 📊 Dashboard Visualization
+### 📊 Dashboard Panel
 
-![PowerShell Dashboard](images/Powershell%20Dashboard%20Panel.png)
-
-✅ Log Source: `WinEventLog:PowerShell`  
-✅ Monitored for suspicious command lines, errors, and script abuse.
+![PowerShell Dashboard](/assets/images/Powershell%20Dashboard%20Panel.png)
 
 ---
 
 ## 🚨 Brute-force Detection (T1110.001)
 
-This detection tracks repeated login failures and visualizes brute-force attack patterns.
+### 🔍 Failed Login Attempts
 
-### 🔍 Failed Login Screen
+![Failed Logins](/assets/images/failed-login-screen.png)
 
-![Failed Logins](images/failed-login-screen.png)
+This detection captured multiple invalid RDP/console login attempts from the same source within a short time window.
 
-We simulated this by entering incorrect passwords multiple times on the lock screen.
+### 📊 Brute-force Dashboard
 
-### 📊 Brute-force Detection Panel
-
-![Brute-force Panel](images/brute-force-dashboard-panel.png)
-
-### ⚙️ Alert Configuration
-
-![Brute-force Alert Config](images/Brute%20force%20alert%20config.png)
-
-✅ Custom Splunk alert set to trigger on more than 5 failed attempts in a short time window.
+![Brute-force Panel](/assets/images/brute-force-dashboard-panel.png)
 
 ---
 
 ## 🛠️ Registry Modification Detection (T1112)
 
-Malware and attackers often modify registry keys silently — this panel detects such changes.
+### 🔍 Raw Registry Log
 
-### 🔍 Registry Log Output
+![Registry Log](/assets/images/Registry%20modification%20query%20results.png)
 
-![Registry Mod](images/Registry%20modification%20query%20results.png)
-
-✅ EventCode 4657 captured suspicious modifications under HKLM and other paths.
+Changes to sensitive registry keys (such as `Run` and `RunOnce`) were captured and visualized.
 
 ---
 
 ## 📊 Final EDR Dashboard
 
-All detection panels were combined into one professional **EDR Monitoring Dashboard**.
-
-![EDR Dashboard](images/Final_EDR_Dashboard_Screenshot.png)
-
-✅ Designed for SOC analysts to quickly review endpoint behavior  
-✅ Built using built-in Splunk features (no third-party apps)
+![EDR Dashboard](/assets/images/Final_EDR_Dashboard_Screenshot.png)
 
 ---
 
-## 🧠 Key Learnings
+## 📌 Key Learnings
 
-- Set up a **Splunk Universal Forwarder** to stream live logs from a Windows machine
-- Ingested and parsed **PowerShell, Security, and Defender logs**
-- Aligned detections with real-world adversary behavior using **MITRE ATT&CK**
-- Built **dashboards + alerts** without paid licenses
-- Learned how to document and present findings professionally
+- Splunk Universal Forwarder setup on Windows VM  
+- Ingested Event Logs + Defender Logs  
+- Used MITRE ATT&CK to structure detection logic  
+- Simulated threats to test EDR visibility  
+- Built real-time dashboards and alerts  
 
 ---
 
 ## 💬 Let’s Connect
 
-👉 Want to discuss more EDR or threat detection projects?  
-📌 [Connect with me on LinkedIn](https://www.linkedin.com/in/suraj-k-3bb9a0190)
+Want to discuss more about SOC, EDR, or threat detection?
+
+👉 [Connect with me on LinkedIn](https://www.linkedin.com/in/suraj-k-3bb9a0190)
 
 ---
 
-> 🔗 Blog created and hosted using **GitHub Pages + Jekyll**  
-> ✍️ Maintained by [SurajCyberSecurityProjects](https://github.com/SurajCyberSecurityProjects)
-
-
-
----
-
-
----
+**Built with ❤️ by Suraj**  
