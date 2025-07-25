@@ -1,83 +1,75 @@
----
-layout: default
-title: "🛡️ Endpoint Threat Detection & Response with Splunk + Windows Defender"
----
-
 # 🛡️ Endpoint Threat Detection & Response with Splunk + Windows Defender
 
 ## 🧠 Project Overview
 
-This project demonstrates how Splunk + Windows Defender can be used to build an **EDR (Endpoint Detection & Response)** monitoring solution in a home lab environment.
-
-We built:
-
-- A real-time Splunk dashboard
-- Mapped MITRE ATT&CK threat detections (PowerShell, Brute-force, Registry tampering)
-- Custom alerts with hourly scheduling
-- Documentation of the detection & response lifecycle
+This hands-on project demonstrates how Splunk (Free) and Windows Defender can be combined to build an **EDR (Endpoint Detection & Response)** setup.  
+It simulates real-world attack behaviors and maps them to **MITRE ATT&CK** techniques for learning + professional reporting.
 
 ---
 
 ## 🧩 MITRE Mapping
 
-- **T1059.001** – PowerShell Execution
-- **T1110.001** – Brute-force Logins
-- **T1112** – Registry Modification
+We built detections mapped to these ATT&CK tactics:
+
+- **T1059.001 – PowerShell Execution**
+- **T1110.001 – Brute-force Login Attempts**
+- **T1112 – Registry Modification**
 
 ---
 
 ## ⚡ PowerShell Abuse Detection (T1059.001)
 
-### 🔍 Raw Logs:
-![PowerShell Logs](images/Powershell%20log%20results.png)
+### 🔍 Raw Logs  
+![PowerShell Logs](images/powershell-log-results.png)
 
-### 📊 Dashboard Panel:
-![PowerShell Dashboard](images/Powershell%20Dashboard%20Panel.png)
+### 📊 Dashboard Panel  
+![PowerShell Dashboard](images/powershell-dashboard-panel.png)
 
 ---
 
 ## 🚨 Brute-force Detection (T1110.001)
 
-### 🔍 Failed Logins:
+### 🔍 Failed Login Screen  
 ![Failed Logins](images/failed-login-screen.png)
 
-### 📊 Dashboard Panel:
+### 📊 Brute-force Detection Panel  
 ![Brute-force Panel](images/brute-force-dashboard-panel.png)
 
-### ⚙️ Alert Setup:
-![Brute-force Alert Config](images/Brute%20force%20alert%20config.png)
+### ⚙️ Alert Configuration  
+![Alert Config](images/brute-force-alert-config.png)
 
 ---
 
 ## 🛠️ Registry Modification Detection (T1112)
 
-### 🔍 Registry Log Output:
-![Registry Mod](images/Registry%20modification%20query%20results.png)
+### 🔍 Registry Log Output  
+![Registry Mod](images/registry-modification-query-results.png)
 
 ---
 
 ## 📊 Final EDR Dashboard
 
-Real-time dashboard with all threat detections mapped to MITRE techniques:
-
+Below is the complete dashboard with all 3 detections in one place:  
 ![EDR Dashboard](images/Final_EDR_Dashboard_Screenshot.png)
 
 ---
 
 ## 🧠 Key Learnings
 
-- Set up a Universal Forwarder to ingest Windows logs into Splunk
-- Built detection logic using `EventCode` and `sourcetype` filtering
-- Scheduled alerts for brute-force behavior
-- Mapped detection panels to real-world adversarial techniques (MITRE)
-- Documented end-to-end defensive lifecycle from logging to alerting
+- Installed and configured Splunk Universal Forwarder on a VM
+- Ingested Windows Defender & Event logs into Splunk
+- Built detection panels based on real attacker behavior
+- Aligned detections with MITRE ATT&CK framework
+- Created alert actions for brute-force login attempts
 
 ---
 
-## 🔗 Connect With Me
+## 💬 Let’s Connect
 
-Let’s connect and collaborate on more real-world security engineering projects:
+📌 Want to discuss more EDR or threat detection projects?  
+👉 [Connect with me on LinkedIn](https://www.linkedin.com/in/suraj-k-3bb9a0190)
 
-[📎 My LinkedIn](https://www.linkedin.com/in/suraj-k-3bb9a0190)
+---
+
 
 ---
