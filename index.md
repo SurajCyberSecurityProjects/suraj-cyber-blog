@@ -1,5 +1,6 @@
 ---
-layout: home
+---
+layout: single
 title: "Suraj's Cybersecurity Projects Blog"
 excerpt: "Hands-on defensive security projects using Splunk, MITRE ATT&CK, and more."
 author_profile: true
@@ -8,6 +9,7 @@ header:
   overlay_filter: "0.3"
   overlay_image: /assets/images/blog-header.jpg
   caption: "Real-world Detection & Response Projects"
+---
 ---
 
 
