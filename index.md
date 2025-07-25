@@ -62,6 +62,7 @@ Collected endpoint logs using native tools (Event Viewer, Sysmon) and sent them 
 
 ![Registry modification query results](/images/registry-modification-query.png)
 
+
 ---
 
 ## 📊 Custom Dashboards (Splunk)
