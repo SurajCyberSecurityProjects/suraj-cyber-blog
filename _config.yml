@@ -1,3 +1,6 @@
-title: "Suraj’s Cybersecurity Blog"
-description: "A practical blog showcasing my hands-on security projects"
-theme: jekyll-theme-cayman
+title: Suraj's Cybersecurity Projects Blog
+description: Real-world defensive security projects using Splunk + MITRE ATT&CK
+theme: minima
+markdown: kramdown
+plugins:
+  - jekyll-feed
