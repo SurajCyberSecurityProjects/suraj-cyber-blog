@@ -27,10 +27,10 @@ We mapped detections to the following MITRE techniques:
 ## ⚡ PowerShell Abuse Detection (T1059.001)
 
 ### 🔍 Raw Logs:
-![PowerShell Logs](images/powershell-log-result.png)
+![PowerShell Logs](images/powershell log results.png)
 
 ### 📊 Dashboard Panel:
-![PowerShell Dashboard](images/powershell-dashboard-panel.png)
+![PowerShell Dashboard](images/Powershell Dashboard Panel.png)
 
 ---
 
@@ -43,14 +43,14 @@ We mapped detections to the following MITRE techniques:
 ![Brute-force Panel](images/brute-force-dashboard-panel.png)
 
 ### ⚙️ Alert Setup:
-![Brute-force Alert Config](images/brute-force-alert-config.png)
+![Brute-force Alert Config](images/brute force alert config.png)
 
 ---
 
 ## 🛠️ Registry Modification Detection (T1112)
 
 ### 🔍 Log Output:
-![Registry Mod](images/registry-modification-result.png)
+![Registry Mod](images/registry modification query results.png)
 
 ---
 
@@ -58,7 +58,7 @@ We mapped detections to the following MITRE techniques:
 
 Here is the final dashboard showing all detection panels aligned to MITRE.
 
-![EDR Dashboard](images/final-edr-dashboard.png)
+![EDR Dashboard](images/Final_EDR_Dashboard_Screenshot.png)
 
 ---
 
