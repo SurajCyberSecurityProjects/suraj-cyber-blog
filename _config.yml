@@ -1,7 +1,49 @@
 title: "Suraj's Cybersecurity Projects Blog"
-description: "Real-world EDR detections using Splunk + MITRE"
+email: surajchoudhary3009@gmail.com
+description: >- # this means fold newlines into spaces
+  A hands-on defensive security blog using Splunk, MITRE ATT&CK, and real-world EDR detections.
+baseurl: "" # leave this empty unless you're in a subdirectory
+url: "https://surajcybersecurityprojects.github.io"
+twitter_username: suraj_cyber
+github_username: SurajCyberSecurityProjects
+
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: "dark" # or try: "air", "mint", "plum", etc.
 remote_theme: "mmistakes/minimal-mistakes@4.27.2"
-minimal_mistakes_skin: "air"
+
 plugins:
   - jekyll-feed
   - jekyll-include-cache
+
+permalink: /:categories/:title/
+
+# Author info
+author:
+  name: "Suraj"
+  avatar: "/assets/images/profile-pic.png"
+  bio: "Cybersecurity Professional | EDR | SOC | Splunk | MITRE ATT&CK"
+  location: "India"
+  links:
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/suraj-k-3bb9a0190"
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/SurajCyberSecurityProjects"
+
+# Navigation bar links
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Projects"
+    url: /projects/
+  - title: "About"
+    url: /about/
+
+include:
+  - _pages
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
