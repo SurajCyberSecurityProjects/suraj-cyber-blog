@@ -26,37 +26,98 @@ This project demonstrates how to detect, visualize, and alert on endpoint-level 
 - Created MITRE-mapped detections  
 - Simulated real-world threats (PowerShell, Brute-force, Registry changes)  
 - Built a live Splunk dashboard  
-- Created custom alerts and documented **detection-to-response flow** ✅  
-- Logged detection telemetry and mapped it to MITRE ATT&CK  
+- Created custom alerts and documented detection-to-response flow  
 
 ---
 
-## 🍀 MITRE ATT&CK Mapping
+## ✳️ MITRE ATT&CK Mapping
 
-Below is a sample MITRE matrix showing mapped techniques based on the telemetry observed from Windows Defender and simulated attacks.
+Mapped techniques to real-world adversary behaviors using MITRE's ATT&CK framework for detection planning:
 
-![MITRE Mapping Screenshot](/images/mitre-attack-mapping.png)
-
----
-
-## 📊 Splunk Dashboard
-
-Here’s the custom Splunk dashboard showing endpoint alerts triggered by MITRE techniques:
-
-![Splunk Panel](/images/Powershell-Dashboard-Panel.png)
+| Attack Type          | MITRE Technique         |
+|----------------------|-------------------------|
+| Brute Force          | T1110                   |
+| PowerShell Execution | T1059.001               |
+| Registry Mod         | T1112                   |
 
 ---
 
-## 💥 PowerShell Simulation
+## 📜 Log Data Collection (Windows Logs)
 
-Screenshot of live PowerShell activity detected and visualized in Splunk:
+Collected endpoint logs using native tools (Event Viewer, Sysmon) and sent them to Splunk:
 
-![PowerShell Results](/images/Powershell-log-results.png)
+- Security logs for brute-force and failed login
+- PowerShell logs for execution tracking
+- Sysmon logs for process, registry, and file events
+
+🖼️ **Failed Login Attempt:**
+
+![Failed login screen](/images/failed-login.png)
+
+🖼️ **PowerShell Log Results:**
+
+![PowerShell log results](/images/powershell-log-results.png)
+
+🖼️ **Registry Modification Detected:**
+
+![Registry modification query results](/images/registry-modification-query.png)
 
 ---
 
-## 🔚 Conclusion
+## 📊 Custom Dashboards (Splunk)
 
-> ✅ This project proves that **home labs** can deliver **enterprise-level security visibility** using free tools.  
-> 👨‍💻 Built 100% independently. No enterprise license or vendor support.
+Interactive dashboards were built in Splunk to visualize attacker behavior in real time.
+
+🖼️ **PowerShell Dashboard Panel:**
+
+![PowerShell Dashboard Panel](/images/powershell-dashboard.png)
+
+🖼️ **Brute-force Dashboard Panel:**
+
+![Brute-force Dashboard Panel](/images/brute-force-dashboard.png)
+
+🖼️ **Final EDR Summary Dashboard:**
+
+![Final EDR Dashboard Screenshot](/images/final-edr-dashboard.png)
+
+---
+
+## 🚨 Custom Alerts & Detection Response Flow
+
+Created Splunk alerts to detect critical behavior such as:
+
+- Repeated failed logins (brute force)  
+- Suspicious PowerShell use  
+- Registry tampering
+
+Each alert triggered custom actions and was mapped back to MITRE techniques.
+
+🖼️ **Brute Force Alert Configuration:**
+
+![Brute-force Alert Config](/images/brute-force-alert-config.png)
+
+---
+
+## 🔁 Detection to Response Flow (Summary)
+
+1. Simulated attacker behavior on endpoint (PowerShell, failed logins)  
+2. Collected logs → Sent to Splunk → Parsed into dashboards  
+3. Triggered alerts based on thresholds or suspicious behavior  
+4. Documented mapping from threat to detection to analyst action
+
+---
+
+## ✅ Key Takeaways
+
+- Built full detection stack using free tools  
+- Gained real-world SOC-level visibility  
+- Practiced custom rule creation + MITRE alignment  
+- Ready for entry-level blue team and SOC roles
+
+---
+
+> 🧠 **Pro Tip**: Want to try this yourself? Spin up a Windows VM, install Splunk Free, simulate basic threats, and watch the logs come alive.
+
+---
+
 
