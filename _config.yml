@@ -1,23 +1,26 @@
 title: "Suraj's Cybersecurity Projects Blog"
 email: surajchoudhary3009@gmail.com
-description: >- # this means fold newlines into spaces
+description: >- 
   A hands-on defensive security blog using Splunk, MITRE ATT&CK, and real-world EDR detections.
-baseurl: "" # leave this empty unless you're in a subdirectory
+baseurl: "" 
 url: "https://surajcybersecurityprojects.github.io"
+
 twitter_username: suraj_cyber
 github_username: SurajCyberSecurityProjects
 
-theme: minimal-mistakes-jekyll
-minimal_mistakes_skin: "dark" # or try: "air", "mint", "plum", etc.
+# ✅ Use only remote_theme — do NOT include 'theme:' if using GitHub Pages
 remote_theme: "mmistakes/minimal-mistakes@4.27.2"
+minimal_mistakes_skin: "dark" # or air, mint, plum, etc.
 
+# Plugins (important for GitHub Pages + theme features)
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
   - jekyll-include-cache
 
 permalink: /:categories/:title/
 
-# Author info
+# Author profile (shown in sidebar if author_profile: true)
 author:
   name: "Suraj"
   avatar: "/assets/images/profile-pic.png"
@@ -31,19 +34,23 @@ author:
       icon: "fab fa-github"
       url: "https://github.com/SurajCyberSecurityProjects"
 
-# Navigation bar links
-navigation:
-  - title: "Home"
-    url: "/"
-  - title: "Projects"
-    url: /projects/
-  - title: "About"
-    url: /about/
+# Defaults for your posts/pages
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+      related: true
 
-include:
-  - _pages
-
-# Build settings
-markdown: kramdown
-highlighter: rouge
+# Analytics (optional, disable if not using)
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "" # Add your tracking ID if needed
+    anonymize_ip: false
 
