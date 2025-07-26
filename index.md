@@ -110,10 +110,11 @@ Each alert triggered custom actions and was mapped back to MITRE techniques.
 
 ## ✅ Key Takeaways
 
-- Built full detection stack using free tools  
-- Gained real-world SOC-level visibility  
-- Practiced custom rule creation + MITRE alignment  
-- Ready for entry-level blue team and SOC roles
+- Engineered a complete endpoint detection stack using free enterprise-grade tools  
+- Enabled real-time threat visibility via MITRE-mapped detections in Splunk  
+- Built custom correlation rules for credential access, PowerShell misuse, and persistence threats  
+- Simulated realistic attacker behavior to validate detection logic  
+
 
 ---
 
